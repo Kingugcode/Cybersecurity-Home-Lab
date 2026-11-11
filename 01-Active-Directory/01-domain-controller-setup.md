@@ -33,7 +33,8 @@ After installation, signed in using the local Administrator account and opened S
 
 ### Evidence
 
-*Insert screenshot: Windows Server 2025 running in VirtualBox.*
+<img width="1917" height="1005" alt="image" src="https://github.com/user-attachments/assets/9944bf01-5a63-442f-aec3-6336376aa5a2" />
+
 
 ## 4. Server Configuration
 
@@ -49,7 +50,8 @@ Confirmed that the server was configured with a static IPv4 address before deplo
 
 ### Evidence
 
-*Insert screenshot: Hostname verification.*
+<img width="967" height="92" alt="image" src="https://github.com/user-attachments/assets/a2574e00-2891-4003-9b5c-bb688c8de792" />
+
 
 ## 5. Installing Active Directory Domain Services
 
@@ -83,7 +85,10 @@ This demonstrated how domain controller deployment can be automated using PowerS
 
 ### Evidence
 
-*Insert screenshot: AD DS deployment configuration or generated PowerShell script.*
+<img width="1917" height="1005" alt="image" src="https://github.com/user-attachments/assets/0576e8bf-b0d2-4c9f-ae95-543a8bd7e04f" />
+<img width="1917" height="1005" alt="image" src="https://github.com/user-attachments/assets/1da13978-b221-491f-9d55-5e101f66688e" />
+
+
 
 ## 6. Validation
 
@@ -110,7 +115,11 @@ Further validation of domain controller health and AD-related DNS service record
 
 ### Evidence
 
-*Insert screenshot: Successful DNS hostname resolution.*
+<img width="972" height="617" alt="Screenshot 2026-11-10 222723" src="https://github.com/user-attachments/assets/0016f826-c5d8-4e23-933c-8acfd8d931b7" />
+
+<img width="957" height="572" alt="Screenshot 2026-11-10 222817" src="https://github.com/user-attachments/assets/b44157b9-a939-4456-a835-7f738c70ed55" />
+
+
 
 ## 7. Technical Concepts Learned
 
