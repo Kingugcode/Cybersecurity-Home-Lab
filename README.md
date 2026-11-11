@@ -2,9 +2,11 @@
 
 ## Project Overview
 
-This home lab is designed to develop hands-on skills in Windows Server administration, Active Directory, networking, virtualization, troubleshooting, and security monitoring.
+I'm building this home lab to develop practical skills in Windows Server administration, Active Directory, networking, virtualization, troubleshooting, and security operations.
 
-The project uses Oracle VirtualBox to simulate an enterprise IT environment.
+The goal is to move beyond theoretical knowledge by configuring systems, testing how they communicate, deliberately introducing faults, and investigating problems in a controlled environment.
+
+The lab is built using Oracle VirtualBox on my personal computer.
 
 ## Lab Environment
 
@@ -18,30 +20,45 @@ The project uses Oracle VirtualBox to simulate an enterprise IT environment.
 | Network | Isolated VirtualBox Internal Network |
 | DNS | Hosted on DC01 |
 
-## Progress
+## Project Progress
 
-- [x] Created Windows Server 2025 VM
-- [x] Configured a static IPv4 address
+- [x] Installed and configured Windows Server 2025
+- [x] Configured static IPv4 addressing
 - [x] Installed Active Directory Domain Services
 - [x] Promoted DC01 to a domain controller
-- [ ] Complete domain controller and DNS health validation
-- [ ] Create organizational units, users, and groups
+- [x] Verified hostname resolution using DNS
+- [ ] Complete domain controller health validation
+- [ ] Create organizational units, users, and security groups
 - [ ] Join a Windows client to the domain
-- [ ] Configure and test Group Policy
-- [ ] Perform networking and authentication troubleshooting
-- [ ] Integrate a SIEM for security monitoring
+- [ ] Configure Group Policy
+- [ ] Perform network and authentication troubleshooting
+- [ ] Integrate a SIEM and investigate security events
+
+## Project Documentation
+
+### 01 — Active Directory
+
+Windows Server deployment, AD DS configuration, domain creation, identity management, and Group Policy.
+
+[View Active Directory Documentation](01-Active-Directory/01-domain-controller-setup.md)
+
+### 02 — Networking
+
+Static IPv4 configuration, DNS validation, network isolation, and troubleshooting exercises.
+
+[View Networking Documentation](02-Networking/01-network-baseline.md)
 
 ## Skills Being Developed
 
 - Windows Server administration
-- Active Directory and DNS
+- Active Directory Domain Services
+- DNS and TCP/IP networking
 - PowerShell administration
-- TCP/IP networking
-- Virtualization
+- Virtualization and infrastructure troubleshooting
 - Security monitoring and incident investigation
 
-## Documentation
+## Next Steps
 
-Each completed lab will include the objective, configuration steps, validation commands, results, and troubleshooting notes.
+Expand the environment with a Windows client VM, configure centralized identity management, and introduce security monitoring through a SIEM.
 
-All work is performed in an isolated test environment.
+This repository will be updated as I complete additional exercises and document troubleshooting findings.
