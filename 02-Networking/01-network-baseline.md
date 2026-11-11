@@ -33,6 +33,7 @@ The server initially had the APIPA address:
 ```text
 169.254.251.47
 ```
+<img width="1008" height="628" alt="Screenshot 2026-10-19 165135" src="https://github.com/user-attachments/assets/71ee6a2f-1e18-451f-9a72-5195fc7852af" />
 
 This occurred because the isolated network did not have a DHCP server assigning addresses.
 
@@ -93,7 +94,10 @@ This confirmed successful hostname resolution within the lab.
 
 ### Evidence
 
-*Insert screenshots of the static IP configuration, DNS client settings, and successful DNS lookup.*
+<img width="1032" height="717" alt="Screenshot 2026-10-19 165735" src="https://github.com/user-attachments/assets/7a6cc9ee-1957-48ab-a24f-9b3ef19d9980" />
+
+<img width="957" height="572" alt="Screenshot 2026-11-10 222817" src="https://github.com/user-attachments/assets/df4f5d0c-8a62-4b8d-a8dd-164c5a571b33" />
+
 
 ## 7. Technical Concepts Learned
 
