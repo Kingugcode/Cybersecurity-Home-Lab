@@ -85,8 +85,9 @@ This demonstrated how domain controller deployment can be automated using PowerS
 
 ### Evidence
 
-<img width="1917" height="1005" alt="image" src="https://github.com/user-attachments/assets/0576e8bf-b0d2-4c9f-ae95-543a8bd7e04f" />
-<img width="1917" height="1005" alt="image" src="https://github.com/user-attachments/assets/1da13978-b221-491f-9d55-5e101f66688e" />
+<img width="1035" height="778" alt="Screenshot 2026-10-25 000736" src="https://github.com/user-attachments/assets/286a1a0b-a1ec-4c81-b2c4-817612ff9f6c" />
+<img width="1037" height="766" alt="Screenshot 2026-10-25 003208" src="https://github.com/user-attachments/assets/ef86a349-85c9-4359-86ca-ed623a305f91" />
+
 
 
 
