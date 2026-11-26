@@ -144,6 +144,9 @@ VirtualBox Internal Network allows VMs attached to the same internal network to 
 
 DC01 has a verified static IPv4 configuration and successfully resolves its hostname using the lab DNS environment.
 
+
+
+
 **CLIENT01 — Network Configuration**
 
 After installing Windows 11 on CLIENT01, I needed to connect it to my existing Active Directory lab.
