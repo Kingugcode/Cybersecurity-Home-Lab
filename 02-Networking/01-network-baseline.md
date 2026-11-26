@@ -147,41 +147,44 @@ DC01 has a verified static IPv4 configuration and successfully resolves its host
 
 
 
-**CLIENT01 — Network Configuration**
+## CLIENT01 — Network Configuration
 
 After installing Windows 11 on CLIENT01, I needed to connect it to my existing Active Directory lab.
 
-Initially, the VM was using VirtualBox's NAT network and had an IP address of 10.0.2.15. I switched the adapter to Internal Network so CLIENT01 could communicate with DC01.
+Initially, the VM was using VirtualBox's NAT network and had an IP address of `10.0.2.15`. I switched the adapter to Internal Network so CLIENT01 could communicate with DC01.
 
-After changing the network mode, I noticed CLIENT01 had automatically assigned itself an IP address of 169.254.27.204.
+After changing the network mode, I noticed CLIENT01 had automatically assigned itself an IP address of `169.254.27.204`.
 
 This was an APIPA address, which made sense because the internal network didn't have a DHCP server assigning IP addresses.
 
-Configuring the Static IP
+### Configuring the Static IP
 
 I used PowerShell to configure CLIENT01 with a static IP address:
 
+```powershell
 New-NetIPAddress -InterfaceAlias "Ethernet" -IPAddress 192.168.10.20 -PrefixLength 24
+```
 
 I then configured DC01 as the DNS server:
 
+```powershell
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 192.168.10.10
+```
 
 Finally, I verified the configuration:
 
+```powershell
 Get-NetIPConfiguration
 Get-NetIPAddress -InterfaceAlias "Ethernet" -AddressFamily IPv4
+```
 
-<img width="976" height="505" alt="image" src="https://github.com/user-attachments/assets/90b351bf-04ea-43fe-a3f0-8cdf8ce8f636" />
+The output confirmed the intended IPv4 address, DNS server, and `/24` prefix.
 
+### Challenges and What I Learned
 
-The output confirmed the intended IPv4 address, DNS server, and /24 prefix.
+I ran into a small PowerShell syntax issue while configuring DNS. I kept putting a space between `Set` and `-DnsClientServerAddress`, which resulted in an error.
 
-Challenges and What I Learned
-
-I ran into a small PowerShell syntax issue while configuring DNS. I kept putting a space between Set and -DnsClientServerAddress, which resulted in an error.
-
-I initially wasn't sure why the command wasn't working, but after checking the syntax, I realized that PowerShell was interpreting Set as a different command.
+I initially wasn't sure why the command wasn't working, but after checking the syntax, I realized that PowerShell was interpreting `Set` as a different command.
 
 Removing the space fixed the issue.
 
@@ -189,16 +192,15 @@ It was a useful reminder that small syntax differences can completely change how
 
 I also got a better understanding of how VirtualBox NAT and Internal Network differ, and why Windows assigns an APIPA address when DHCP isn't available.
 
-Result
+### Result
 
 CLIENT01 is now configured with:
 
-IPv4: 192.168.10.20/24
+- IPv4: `192.168.10.20/24`
+- DNS: `192.168.10.10`
+- Network: VirtualBox Internal Network
+- Default gateway: Not configured
 
-DNS: 192.168.10.10
-
-Network: VirtualBox Internal Network
-
-Default gateway: Not configured
+The next step is to verify communication with DC01 and confirm that CLIENT01 can locate the Active Directory domain controller.
 
 The next step is to verify communication with DC01 and confirm that CLIENT01 can locate the Active Directory domain controller.
