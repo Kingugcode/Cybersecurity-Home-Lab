@@ -172,6 +172,9 @@ Finally, I verified the configuration:
 Get-NetIPConfiguration
 Get-NetIPAddress -InterfaceAlias "Ethernet" -AddressFamily IPv4
 
+<img width="976" height="505" alt="image" src="https://github.com/user-attachments/assets/90b351bf-04ea-43fe-a3f0-8cdf8ce8f636" />
+
+
 The output confirmed the intended IPv4 address, DNS server, and /24 prefix.
 
 Challenges and What I Learned
