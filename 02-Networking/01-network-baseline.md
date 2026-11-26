@@ -184,6 +184,9 @@ The output confirmed the intended IPv4 address, DNS server, and `/24` prefix.
 
 I ran into a small PowerShell syntax issue while configuring DNS. I kept putting a space between `Set` and `-DnsClientServerAddress`, which resulted in an error.
 
+<img width="976" height="505" alt="image" src="https://github.com/user-attachments/assets/b96b61b1-6635-4792-974d-ffbb01aef870" />
+
+
 I initially wasn't sure why the command wasn't working, but after checking the syntax, I realized that PowerShell was interpreting `Set` as a different command.
 
 Removing the space fixed the issue.
